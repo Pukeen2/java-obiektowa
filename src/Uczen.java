@@ -5,7 +5,30 @@ public class Uczen extends Osoba{
     public Uczen(String imie, int wiek) {
         super(imie, wiek);
         liczbaUczniow+=1;
-        this.numer = liczbaUczniow;
+        numer = liczbaUczniow;
+    }
+
+    public static int getLiczbaUczniow() {
+        return liczbaUczniow;
+    }
+
+    public static void setLiczbaUczniow(int liczbaUczniow) {
+        Uczen.liczbaUczniow = liczbaUczniow;
+    }
+
+    public int getNumer() {
+        return numer;
+    }
+
+    public void setNumer(int numer) {
+        this.numer = numer;
+    }
+    @Override
+    public String toString() {
+        return "Uczeń: " +
+                "imie = '" + getImie() + '\'' +
+                ", wiek = " + getWiek() +
+                ", numer = " + numer;
     }
 
 }
